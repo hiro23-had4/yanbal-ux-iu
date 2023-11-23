@@ -1,0 +1,362 @@
+:root {
+    
+    --50: #fdf5ef;
+    --100: #fae7da;
+    --200: #f4ccb4;
+    --300: #ecaa85;
+    --400: #e47e53;
+    --500: #dc582a;
+    --600: #cf4827;
+    --700: #ac3522;
+    --800: #892d23;
+    --900: #6f271f;
+    --950: #3c110e;  
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #e7e4e462;
+    font-family: 'Playfair Display', serif;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(209, 209, 209, 0.676);
+    border-radius: 8px;
+}
+/*Globales*/
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 1.8rem;
+}
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+/*--------------------*/
+
+/* nosotros */
+.nosotros_title {
+    margin-top: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+.nosotros_title span {
+    color: #d44d0a;
+}
+
+.nosotros_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    
+    /* -webkit-box-shadow: -15px 14px 21px 4px rgba(184,184,184,1);
+    -moz-box-shadow: -15px 14px 21px 4px rgba(184,184,184,1); */
+}
+.nosotros_img img{
+    border-radius: 2rem;
+    box-shadow: -15px 14px 21px 4px rgba(184,184,184,1);
+}
+
+/* .nosotros_img video {
+    width: 100%;
+    border-radius: 2rem;
+} */
+.nosotros_texto {
+    text-align: justify;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .nosotros_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* seccion productos */
+.producto_title h2{
+    margin-top: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+.producto_title span {
+    color: #d44d0a;
+}
+
+
+.producto_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 3rem 0;
+}
+
+.producto_img:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.producto_titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #0c370d;
+    font-weight: 600;
+}
+
+.producto_texto {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .producto_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* seccion slider vendedor */
+.vendedor h2 {
+    margin-top: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+.vendedor h2 span {
+    color: #d44d0a;
+}
+
+.vendedor_contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_contenido {
+    padding-block: 5rem;
+}
+
+.card_contenido {
+    margin-inline: 1.75rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.card_article {
+    width: 300px;
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+.card_image {
+    position: relative;
+    background-color: hsl(38, 100%, 78%);
+    padding-top: 1.5rem;
+    margin-bottom: -.75rem;
+    width: 100%;
+}
+
+.card_info {
+    background-color: hsl(212, 42%, 20%);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.card_image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card_img {
+    width: 180px;
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.card_shadow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: hsl(32, 75%, 50%);
+    border-radius: 50%;
+    top: 3.73rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    filter: blur(45px);
+    
+}
+
+.card_nombre {
+    font-size: 1.8rem;
+    color: hsl(195, 75%, 52%);
+    margin-bottom: .75rem;
+}
+
+.card_descripcion {
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+    color: #FFFFFF;
+}
+
+.card_button {
+    display: inline-block;
+    background-color: hsl(26, 92%, 58%);
+    padding: .8rem 2.2rem;
+    border-radius: 2rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* swipper*/
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: hsl(28, 100%, 50%);
+  /* display: none; */
+}
+.swiper-button-prev span,
+.swiper-button-next span{
+    font-size: 5rem;
+}
+.swiper-button-prev {
+  left: -1.5rem;
+}
+
+.swiper-button-next {
+  right: -1.5rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: hsla(25, 81%, 47%, 0.601);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(28, 100%, 50%);
+} 
+
+
+/* seccion catalogo */
+.explorar_title h2 {
+    margin: 5rem 0;
+    text-align: center;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+.explorar_title span {
+    color: #e75309;
+    /* color: #586022; */
+}
+
+/* footer */
+.footer {
+    margin-top: 5rem;
+    background-color: #24252a;
+    padding: 1rem 0;
+}
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.footer_info h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: darkorange;
+    font-weight: 900;
+}
+
+.footer_info a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #9b9b9b;
+}
+
+.footer_info a:last-child {
+    margin-bottom: 0;
+}
+
+.footer_info a:hover {
+    color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+    .footer_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 492px) {
+    .footer_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.icons_networks {
+    display: flex;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.icons_networks a {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.icons_networks a:hover{
+    color: red;
+}
+
+hr {
+    width: 90%;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+.derechos_reservados p{
+    text-align: center;
+    color: #9b9b9b;
+}

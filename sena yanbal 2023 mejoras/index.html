@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina principal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- font-icon Google-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<!-- realizar ajusten del menu, boton mostrar y responsive y demas -->
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">SEC C.</a>
+
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav_hidden">
+                <a href="#header" class="nav_link--menu">Inicio</a>
+                <a href="#nosotros" class="nav_link--menu">Nosotros</a>
+                <a href="#" class="nav_link--menu">Productos</a>
+                <a href="#" class="nav_link--menu">Catálogo</a>
+            </div>
+
+            <div class="inicio_up">
+                <a href="#" id="showPopup">
+                    <span class="material-icons-sharp">
+                        account_circle
+                    </span>
+                </a>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Login popup-->
+    <div id="loginPopup" class="popup">
+        <div class="login">
+            <div class="login_forms">
+                <div class="signin-signup">
+                    <!-- inicio sesión -->
+                    <form action="" class="sign_in_form">
+                        <h2 class="title">Iniciar Sesión</h2>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <select>
+                                <option disabled>-- selecciona tu Rol --</option>
+                                <option value="">Cliente</option>
+                                <option value="">vendedor</option>
+                            </select>
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="input_pass">
+                            <a class="forget_pass" href="#">Olvidaste tu contraseña</a>
+                        </div>
+                        <input type="submit" value="Iniciar Sesión" class="btn solid">
+                    </form>
+
+                    <!-- Registro -->
+                    <form action="" class="sign_up_form">
+                        <h2 class="title">Registrarse</h2>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <select>
+                                <option disabled>-- selecciona tu Rol --</option>
+                                <option value="">Cliente</option>
+                                <option value="">vendedor</option>
+                            </select>
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nombre">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Apellido">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="number" placeholder="Teléfono">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="number" placeholder="Edad">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Ciudad">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Direccion">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input_field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <input type="submit" value="Registrarse" class="btn solid">
+                    </form>
+                </div>
+            </div>
+
+            <div class="panels_container">
+                <div class="panel left_panel">
+                    <div class="panel_content">
+                        <h3>Nuevo Usuario?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nihil repellendus
+                            reiciendis?</p>
+                        <button class="btn transparent" id="sign_up_btn">Registrarse</button>
+                    </div>
+
+                    <img src="img/resgister.svg" class="image" alt="registro">
+                </div>
+
+                <div class="panel right_panel">
+                    <div class="panel_content">
+                        <h3>Iniciar sesión</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nihil repellendus
+                            reiciendis?</p>
+                        <button class="btn transparent" id="sign_in_btn">Iniciar Sesión</button>
+                    </div>
+
+                    <img src="img/login.svg" class="image" alt="registro">
+                </div>
+            </div>
+
+            <!-- este es el boton para cerrar ventana emergente-->
+            <div class="close_login">
+                <button id="closePopup">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <section class="banner">
+        <div class="slider">
+            <div class="slide active">
+                <img src="img/portada_02.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Cuidado</h1>
+                    </div>
+                    <div class="content">
+                        <h3>00. Team SEC C Esports</h3>
+                        <p>SEC C Esports is a professional esports team based in India. It was founded in 2021 by
+                            Abhishek Shakya, a young entrepreneur and gamer.</p>
+                        <a href="#" class="btn_info">More Details</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>Personal</h1>
+                    <h3>Yanbal</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/portada_03.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Snak</h1>
+                    </div>
+                    <div class="content">
+                        <h3>01. The Entry Fragger</h3>
+                        <p>Abhishek Shakya, also known by his in-game name SnakeEye, is the entry fragger of SEC C
+                            Esports.</p>
+                        <a href="#" class="btn_info">More Details</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>eEye</h1>
+                    <h3>Abhishek</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/portada_04.webp" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Ven</h1>
+                    </div>
+                    <div class="content">
+                        <h3>02. The Supporter</h3>
+                        <p>Ashish Shakya, in-game name Venom, is the support player of Team SEC C in Battlegrounds
+                            Mobile India (BGMI).</p>
+                        <a href="#" class="btn_info">More Details</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>om</h1>
+                    <h3>Ashish
+
+                    </h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/portada_08.jpg" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Fla</h1>
+                    </div>
+                    <div class="content">
+                        <h3>03. The IGL</h3>
+                        <p>Pankaj Rajpoot, in-game name Flash, is the in-game leader (IGL) of Team SEC C in
+                            Battlegrounds Mobile India (BGMI).</p>
+                        <a href="#" class="btn_info">More Details</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>sh</h1>
+                    <h3>pankaj</h3>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="img/portada_07.webp" alt="">
+                <div class="left-info">
+                    <div class="penetrte-blur">
+                        <h1>Mr. R</h1>
+                    </div>
+                    <div class="content">
+                        <h3>04. The All Rounder</h3>
+                        <p>Shivam Rajput, in-game name Mr. Rajput, is an all-rounder of Team SEC C in Battlegrounds
+                            Mobile India (BGMI).</p>
+                        <a href="#" class="btn_info">More Details</a>
+                    </div>
+                </div>
+                <div class="right-info">
+                    <h1>ajput</h1>
+                    <h3>Shivam</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <span class="prev-btn"><i class="fa-solid fa-chevron-left fa-3x"></i></span>
+            <span class="next-btn"><i class="fa-solid fa-chevron-right fa-3x"></i></span>
+        </div>
+    </section>
+
+    <section class="container nosotros" id="nosotros">
+        <h2 class="nosotros_title">Sobre <span>Nosotros</span></h2>
+        <div class="nosotros_grid">
+            <div class="nosotros_img">
+                <img src="img/nosotros.jpg" alt="nosotros">
+            </div>
+            <div class="nosotros_texto">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, numquam deserunt enim quaerat cum
+                    doloribus accusantium, possimus ex, eveniet laboriosam eius corporis quo? Quos nobis impedit
+                    consequuntur nemo veritatis. Nemo. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis, numquam deserunt enim quaerat cum
+                    doloribus accusantium, possimus ex, eveniet laboriosam eius corporis quo? Quos nobis impedit
+                    consequuntur nemo veritatis. Nemo.
+                </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos a labore debitis ipsam. Magni
+                    sed nulla quisquam odit quidem deleniti neque quis dolorum aut eos, rem repellat iure, laudantium
+                    dolorem?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="producto">
+        <div class="container producto_title">
+            <h2>Prod<span>uctos</span></h2>
+        </div>
+
+        <div class="producto_bg">
+            <div class="container producto_grid">
+                <div class="producto_maquillaje">
+                    <img class="producto_img" src="img/imagen_01.jpg" alt="Maquillaje">
+                    <h3 class="producto_titulo">Maquillaje</h3>
+                    <p class="producto_texto">¡Disfruta tu belleza con ingredientes naturales!</p>
+                </div>
+                <div class="producto_perfumes">
+                    <img class="producto_img" src="img/imagen_02.jpg" alt="perfumes">
+                    <h3 class="producto_titulo">Perfumes</h3>
+                    <p class="producto_texto">Con esencias únicas y memorables</p>
+                </div>
+                <div class="producto_facial">
+                    <img class="producto_img" src="img/imagen_03.jpg" alt="tratamiento facial">
+                    <h3 class="producto_titulo">Tratamiento Facial</h3>
+                    <p class="producto_texto">¡Una línea experta en cuidado de la piel!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="vendedor container">
+        <h2>Vende<span>dores</span></h2>
+        <div class="vendedor_contenido swiper">
+            <div class="card_contenido">
+                <div class="swiper-wrapper">
+                    <article class="card_article swiper-slide">
+                        <div class="card_image">
+                            <img src="img/avatar-1.png" alt="avatar" class="card_img">
+                            <div class="card_shadow"></div>
+                        </div>
+
+                        <div class="card_info">
+                            <h3 class="card_nombre">Andres Lopez</h3>
+                            <p class="card_descripcion">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Illo ad cupiditate Lorem ipsum dolor, sit amet consectetur.
+                            </p>
+
+                            <a href="#" class="card_button">Ver Más</a>
+                        </div>
+                    </article>
+
+                    <article class="card_article swiper-slide">
+                        <div class="card_image">
+                            <img src="img/avatar-2.png" alt="avatar" class="card_img">
+                            <div class="card_shadow"></div>
+                        </div>
+
+                        <div class="card_info">
+                            <h3 class="card_nombre">Carlos Benavides</h3>
+                            <p class="card_descripcion">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Illo ad cupiditate Lorem ipsum dolor, sit amet consectetur.
+                            </p>
+
+                            <a href="#" class="card_button">Ver Más</a>
+                        </div>
+                    </article>
+
+                    <article class="card_article swiper-slide">
+                        <div class="card_image">
+                            <img src="img/avatar-3.png" alt="avatar" class="card_img">
+                            <div class="card_shadow"></div>
+                        </div>
+
+                        <div class="card_info">
+                            <h3 class="card_nombre">Maria Montoya</h3>
+                            <p class="card_descripcion">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Illo ad cupiditate Lorem ipsum dolor, sit amet consectetur.
+                            </p>
+
+                            <a href="#" class="card_button">Ver Más</a>
+                        </div>
+                    </article>
+
+                    <article class="card_article swiper-slide">
+                        <div class="card_image">
+                            <img src="img/avatar-4.png" alt="avatar" class="card_img">
+                            <div class="card_shadow"></div>
+                        </div>
+
+                        <div class="card_info">
+                            <h3 class="card_nombre">Laura Garcia</h3>
+                            <p class="card_descripcion">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Illo ad cupiditate Lorem ipsum dolor, sit amet consectetur.
+                            </p>
+
+                            <a href="#" class="card_button">Ver Más</a>
+                        </div>
+                    </article>
+
+                    <article class="card_article swiper-slide">
+                        <div class="card_image">
+                            <img src="img/avatar-5.png" alt="avatar" class="card_img">
+                            <div class="card_shadow"></div>
+                        </div>
+
+                        <div class="card_info">
+                            <h3 class="card_nombre">Fernanda Ramirez</h3>
+                            <p class="card_descripcion">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Illo ad cupiditate Lorem ipsum dolor, sit amet consectetur.
+                            </p>
+
+                            <a href="#" class="card_button">Ver Más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!--Navigation buttons-->
+            <div class="swiper-button-prev">
+                <span class="material-icons-sharp">
+                    keyboard_arrow_left
+                </span>
+
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-icons-sharp">
+                    keyboard_arrow_right
+                </span>
+            </div>
+
+            <!--Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+
+    <section class="explorar">
+        <div class="container explorar_title">
+            <h2>Explorar <span>Catálogo</span></h2>
+        </div>
+
+        <div class="explorar_catalogo">
+            <a
+                href="https://docs.yanbal.com/cdigital/co/2023/c11/oficial/?replicated=corporate&country=co&lang=es_CO&_ga=2.176445734.2095193382.1697305695-617253605.1697305695">
+                <img src="img/Catalogo.jpg" alt="Catalogo">
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer_grid">
+            <div class="footer_info">
+                <h3>Contacto</h3>
+                <a href="#">123, Facatativa</a>
+                <a href="#">Colombia, Cundinamarca</a>
+                <a href="#">000 123 567 890</a>
+            </div>
+
+            <div class="footer_info">
+                <h3>UseFul Link</h3>
+                <a href="#">Blog</a>
+                <a href="#">Ventas</a>
+                <a href="#">Tickets</a>
+                <a href="#">Servicio al cliente</a>
+                <a href="#">Certificaciones</a>
+            </div>
+
+            <div class="footer_info">
+                <h3>Recent Post</h3>
+                <a href="#">Lorem ipsum dolor sit amet</a>
+                <a href="#">Lorem ipsum dolor sit amet</a>
+                <a href="#">Lorem ipsum dolor sit amet</a>
+                <a href="#">Lorem ipsum dolor sit amet</a>
+                <a href="#">Lorem ipsum dolor sit amet</a>
+            </div>
+            <div class="footer_info">
+                <h3>Redes Sociales</h3>
+                <div class="icons_networks">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="derechos_reservados">
+            <p>Todos los Derechos Reservados &copy; 2023</p>
+        </div>
+    </footer>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
